@@ -1,2 +1,5 @@
-# node_simple_api
-Simple API generation with Node 
+# Simple API development with node
+
+## Installation Steps
+
+npm install 
