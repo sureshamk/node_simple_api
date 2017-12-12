@@ -1,0 +1,14 @@
+{
+  "mongo": {
+    "host": "localhost",
+    "port": "27017",
+    "db":"test",
+    "collection": "test",
+    "username": "",
+    "password": ""
+  },
+  "app": {
+    "port":"8084",
+    "host":"127.0.0.1"
+  }
+}
