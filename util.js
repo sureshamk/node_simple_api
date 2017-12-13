@@ -69,26 +69,26 @@ exports.validateInput = function (data) {
         },
         'pan': {
             'required': true,
-            'pattern': '',
-            'message': '',
+            'pattern': /(^([a-zA-Z]{5})([0-9]{4})([a-zA-Z]{1})$)/,
+            'message': 'Invalid PAN number',
             'fieldName': 'PAN Number'
         },
         'dob': {
             'required': true,
             'pattern': /^\d{2}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/,
-            'message': '',
+            'message': 'Date of birth format should be yy/mm/dd',
             'fieldName': 'Date of birth'
         },
         'gender': {
             'required': true,
-            'pattern': '',
-            'message': '',
+            'pattern': /male$|female$/,
+            'message': 'Gender should male or female',
             'fieldName': 'Gender'
         },
         'email': {
             'required': true,
             'pattern': /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-            'message': "",
+            'message': "Invalid email address",
             'fieldName': 'Email'
         },
         'address': {
@@ -130,7 +130,7 @@ exports.validateInput = function (data) {
                     let re = new RegExp(validation.pattern);
                     if (!re.test(data[field])) {
                         let v2 = vali["" + field + ""] = {};
-                        v2['pattern'] = "The " + validationFields[field]["fieldName"] + " not as expected patern ";
+                        v2['pattern'] =  validationFields[field]["message"] ;
                     }
                 }
             }

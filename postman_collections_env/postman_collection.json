@@ -1,0 +1,210 @@
+{
+	"id": "6be6b7a3-5354-ed6e-5a5b-f819395d0654",
+	"name": "Node Simple API",
+	"description": "",
+	"order": [
+		"7dc60098-4b44-26bf-ec2c-04eac3244400",
+		"674f0d4b-a85c-2cf2-25b9-90f87a6c476b"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1513134684209,
+	"owner": "198901",
+	"public": false,
+	"requests": [
+		{
+			"id": "674f0d4b-a85c-2cf2-25b9-90f87a6c476b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{HOST}}/api/customers?token={{TOKEN}}",
+			"queryParams": [
+				{
+					"key": "token",
+					"value": "{{TOKEN}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "first_name",
+					"value": "sureshadsdasdas",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "ddasaddds@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "filetoupload",
+					"value": "",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				},
+				{
+					"key": "dob",
+					"value": "99/12/13",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "father_name",
+					"value": "asddsasdasdsa",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "last_name",
+					"value": "adasasdds",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "pan",
+					"value": "sddasd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "gender",
+					"value": "asd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "address",
+					"value": "asdadasasdasds",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513135724281,
+			"name": "Retrive Customer by token ",
+			"description": "",
+			"collectionId": "6be6b7a3-5354-ed6e-5a5b-f819395d0654",
+			"responses": []
+		},
+		{
+			"id": "7dc60098-4b44-26bf-ec2c-04eac3244400",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{HOST}}/api/customers",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "first_name",
+					"value": "Suresh",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "last_name",
+					"value": "Velusamy",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "father_name",
+					"value": "Velusamy",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "example@gmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "image",
+					"value": "ic_app.png",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				},
+				{
+					"key": "dob",
+					"value": "99/11/11",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "pan",
+					"value": "EYXPS2994A",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "gender",
+					"value": "male",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "address",
+					"value": "2/32 ,  City, Country,PIN",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"TOKEN\",jsonData.token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513136725000,
+			"name": "Create Customer",
+			"description": "",
+			"collectionId": "6be6b7a3-5354-ed6e-5a5b-f819395d0654",
+			"responses": []
+		}
+	]
+}

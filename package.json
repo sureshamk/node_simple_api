@@ -1,10 +1,10 @@
 {
-  "name": "happyemi",
+  "name": "NodeSimpleApi",
   "version": "1.0.0",
   "description": "Api for cutomers",
   "main": "index.js",
   "scripts": {
-    "run": "node index.js"
+    "start": "node index.js"
   },
   "author": "suresh velusamy",
   "license": "MIT",

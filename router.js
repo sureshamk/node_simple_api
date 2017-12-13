@@ -58,13 +58,13 @@ let actions = {
                 } else {
                     // validate file
                     let validationFile = utils.isValidFile(res, files);
-                    console.log(validationFile);
+
                     if (validationFile !== true) {
                         return utils.respond(res, new Buffer.from(JSON.stringify(validationFile)), "422");
                     }
 
                     let oldpath = files.image.path;
-                    let newpath = './uploads/' + files.image.name;
+                    let newpath = config.uploads.dir +"/" + files.image.name;
                     fs.rename(oldpath, newpath, function (err) {
                         if (err) throw err;
                         let tokenString = fields.first_name + fields.dob + new Date().getTime();

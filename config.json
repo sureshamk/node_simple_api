@@ -2,13 +2,16 @@
   "mongo": {
     "host": "localhost",
     "port": "27017",
-    "db":"test",
-    "collection": "test",
+    "db":"simpleAPIDB",
+    "collection": "customers",
     "username": "",
     "password": ""
   },
   "app": {
     "port":"8084",
     "host":"127.0.0.1"
+  },
+  "uploads":{
+    "dir":"./uploads"
   }
 }
